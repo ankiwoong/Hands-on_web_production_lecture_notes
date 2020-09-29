@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: CSS3 banner</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.round_container > div {
+	margin-bottom: 20px;
+	width: 30px;
+	height: 30px;
+	background-color: #8ac007;
+	border-radius: 15px;
+	opacity: 0;
+	-ms-transform: translateY(80px);
+	-webkit-transform: translateY(80px);
+	transform: translateY(80px);
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.round_container:hover > div {
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+.round_container .round1 {
+	-webkit-transition-delay: 0;
+	transition-delay: 0;
+}
+.round_container .round2 {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+.round_container .round3 {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+.round_container .round4 {
+	-webkit-transition-delay: 0.9s;
+	transition-delay: 0.9s;
+}
+</style>
+<!-- http://hitejinro.com -->
+<!-- http://anudg.com -->
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 Banner</h1>
+<div class="container">
+	<div class="round_container">
+		<div class="round1"></div>
+		<div class="round2"></div>
+		<div class="round3"></div>
+		<div class="round4"></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: CSS3 banner</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+section.product::before, section.product::after {
+	content: "";
+	display: block;
+}
+section.product::after {
+	clear: both;
+}
+section.product div {
+	float: left;
+	margin-left: 3.333%;
+	margin-bottom: 40px;
+	width: 45%;
+	height: 200px;
+	text-align: center;
+	color: #fff;
+	background: url(images/detail_banner.jpg) no-repeat;
+	background-size: cover;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+section.product div:nth-child(2n) {
+	margin-right: 3.333%;
+}
+
+@media only screen and (max-width: 600px) {
+	section.product div {
+		margin: 5%;
+		width: 90%;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 Banner</h1>
+<div class="container">
+	<section class="product">
+		<div class="product1"></div>
+		<div class="product2"></div>
+		<div class="product3"></div>
+		<div class="product4"></div>
+		<div class="product5"></div>
+		<div class="product6"></div>
+	</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿1) Mobile Site 제작의 시작
+
+1-1) Mobile Bench Marking
+
+http://www.iloom.com/main.do
+
+http://zishen.com/main.asp
+
+http://zishen.com/m/main.asp
+
+http://16brand.com
+
+http://m.16brand.com
+
+http://www.chungjungone.com/index.do
+
+
+1-2) navigator.userAgent를 활용한 Header Script
+
+https://www.w3schools.com/jsref/prop_nav_useragent.asp

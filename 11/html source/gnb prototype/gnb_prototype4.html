@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>navigation :: basic navigation</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+nav {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 40px;
+	font-size: 0.875em;
+	background-color: #fff;
+}
+nav > ul {
+	height: 40px;
+	text-align: center;
+	overflow: hidden;
+	-webkit-transition: height 0.4s;
+	transition: height 0.4s;
+}
+nav > ul > li {
+	display: inline-block;
+}
+nav > ul > li > a {
+	display: block;
+	padding: 0 40px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 600;
+	background-color: #fff;
+	color: #666;
+}
+nav ul ul a {
+	display: block;
+	padding: 0 35px 0 40px;
+	line-height: 38px;
+	font-weight: 400;
+	color: #ccc;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+nav ul ul li:first-child a {
+	padding-top: 5px;
+}
+nav ul ul li:last-child a {
+	padding-bottom: 5px;
+}
+.sub_shadow {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	z-index: 10;
+	width: 100%;
+	height: 0;
+	background-color: #999;
+	-webkit-transition: height 0.4s;
+	transition: height 0.4s;
+}
+nav:hover > ul {
+	height: 202px;
+}
+nav:hover+.sub_shadow {
+	height: 162px;
+}
+nav > ul > li:hover ul li {
+	background-color: #888;
+}
+nav ul ul a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+.contents {
+	padding: 20px;
+	padding-top: 60px;
+	background-color: #f4f4f4;
+	color: #666;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+</script>
+</head>
+
+<body>
+<div class="container">
+	<nav>
+		<ul>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<ul>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+					<li><a href="">2depth</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="sub_shadow"></div>
+	<div class="contents">contents</div>
+</div>
+</body>
+</html>

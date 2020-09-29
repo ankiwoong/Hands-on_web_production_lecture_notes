@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>navigation :: basic navigation</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+nav {
+	position: relative;
+	width: 100%;
+	font-size: 0.875em;
+	background-color: #fff;
+}
+nav::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	height: 1px;
+	background-color: #eaeaea;
+}
+nav > ul {
+	position: relative;
+	text-align: center;
+}
+nav > ul > li {
+	display: inline-block;
+}
+nav > ul > li > a {
+	display: block;
+	padding: 10px 40px;
+	font-weight: 600;
+	color: #666;
+}
+nav .sub {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0; /* height: 163px; */
+	overflow: hidden;
+	background-color: #fff;
+	-webkit-transition: height 0.3s;
+	transition: height 0.3s;
+}
+nav .sub .sub_contents {
+	margin: 0 auto;
+	width: 824px;
+	text-align: left;
+}
+nav .sub .sub_contents ul {
+	display: inline-block;
+	width: 135px;
+	vertical-align: top;
+}
+nav .sub .sub_contents li {
+	padding: 8px 0;
+	line-height: 24px;
+	text-indent: 16px;
+	background-color: #f4f4f4;
+	border-top: 1px solid #eaeaea;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav .sub .sub_contents li a {
+	color: #666;
+}
+nav .sub .sub_contents li:first-child {
+	border-top: none;
+}
+nav .sub .sub_contents .brand {
+	display: inline-block;
+	margin: 10px;
+	padding: 10px;
+	width: 660px;
+	height: 140px;
+	vertical-align: top;
+	color: #666;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav > ul > li:hover > a+.sub {
+	height: 163px;
+	border-bottom: 1px solid #eaeaea;
+}
+.contents {
+	padding: 20px;
+	background-color: #f4f4f4;
+	color: #666;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+</script>
+<!-- http://www.naturerepublic.com/shop/main -->
+</head>
+
+<body>
+<div class="container">
+	<nav>
+		<ul>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu1 brand</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu2 brand</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu3 brand</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu4 brand</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu5 brand</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="">1DEPTH</a>
+				<div class="sub">
+					<div class="sub_contents">
+						<ul>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+							<li><a href="">2depth</a></li>
+						</ul>
+						<div class="brand">menu6 brand</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<div class="contents">contents</div>
+</div>
+</body>
+</html>

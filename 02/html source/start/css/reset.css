@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none;
+}
+body {
+	font-family: "돋움", Dotum, sans-serif;
+	font-size: 14px;
+	color: #666;
+}
+img, fieldset {
+	vertical-align: top;
+	border: 0;
+}
+ul, ol, li, dl {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+hr {
+	display: none;
+}
+a {
+	color: inherit;
+}
+a, a:link {
+ text-decoration: none;
+ color: #333;
+}
+a:visited {
+	color: #333;
+}
+a:hover, a:active {
+	text-decoration: none;
+	color: #333;
+}
+em, i, address {
+	font-style: normal;
+	font-weight: normal;
+}
+legend, caption {
+	display: none;
+	clear: both;
+}
+input, textarea, select, button, table {
+	line-height: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+section, nav, article, aside, hgroup, header, footer {
+	display: block;
+}
+textarea, input {
+	background: url(none);
+	-webkit-border-radius: 1px;
+	-webkit-apprearance: normal;
+}
+textarea {
+	resize: none;
+}
+label {
+	cursor: pointer;
+}

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: Mobile GNB coding</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+
+/* header */
+header {
+	display: block;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 0;
+	overflow: hidden;
+	background-color: #fff;
+}
+.menu_btn {
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 101;
+	margin: 20px 0 0 20px;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	background: url(images/toggle_button.png) no-repeat 0 0;
+}
+nav .mobile_menu {
+	position: fixed;
+	z-index: 101;
+	left: 0;
+	top: 0;
+	padding: 0 0 0 40px;
+	width: 240px;
+	height: 100%;
+	overflow: hidden;
+	background-color: #fff;
+	box-sizing: border-box;
+	/* -webkit-transition: left 0.5s ease-out; */
+	/* transition: left 0.5s ease-out; */
+}
+nav .mobile_menu ul {
+	margin-top: 80px;
+}
+nav .mobile_menu ul li {
+	margin-bottom: 20px;
+}
+nav .mobile_menu ul li a {
+	text-decoration: none;
+	font-size: 1em;
+	color: #666;
+}
+nav .mobile_menu li a:hover {
+	text-decoration: underline;
+}
+.contents {
+	margin-left: 240px;
+	padding: 20px 0 0 28px;
+	min-height: 600px;
+	background-color: #f4f4f4;
+	color: #666;
+}
+.transparent {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	background: rgba(0,0,0,.5);
+	/* -webkit-transition: left 0.5s ease-out; */
+	/* transition: left 0.5s ease-out; */
+}
+.transparent.active {
+	/* left: 240px; */
+	bottom: 0;
+}
+
+/* responsive CSS */
+@media only screen and (max-width: 750px) {
+	header {
+		display: block;
+		width: 100%;
+		height: 80px;
+	}
+	.menu_btn {
+		display: inline-block;
+	}
+	nav .mobile_menu {
+		left: -240px;
+	}
+	nav .mobile_menu.active {
+		left: 0;
+	}
+	.contents {
+		margin-left: 0;
+	}
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".menu_btn").click(function(e){
+		e.preventDefault();
+		$(".mobile_menu").animate({left:0}, 500);
+		$(".transparent").addClass("active").animate({left:240}, 500);
+	});
+	$(".transparent").click(function(){
+		$(".mobile_menu").animate({left:-240}, 500, function(){
+			$(this).removeAttr("style");
+		});
+		$(".transparent").animate({left:0}, 500, function(){
+			$(this).removeClass("active");
+			$(this).removeAttr("style");
+		});
+	});
+
+	$(window).resize(function(){
+		var w=$(this).width();
+
+		if(w > 750){
+			if($(".transparent").hasClass("active")){
+				$(".mobile_menu").animate({left:0}, 500, function(){
+					$(this).removeAttr("style");
+				});
+				$(".transparent").animate({left:0}, 500, function(){
+					$(this).removeClass("active");
+					$(this).removeAttr("style");
+				});
+			}
+		}
+	});
+	$(window).trigger("resize");
+});
+</script>
+</head>
+
+<body>
+<div class="container">
+	<header>
+		<a href="" class="menu_btn">menu</a>
+		<nav>
+			<div class="mobile_menu">
+				<ul>
+					<li><a href="#">1Depth</a></li>
+					<li><a href="#">1Depth</a></li>
+					<li><a href="#">1Depth</a></li>
+					<li><a href="#">1Depth</a></li>
+					<li><a href="">1Depth</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="contents">contents</div>
+	<div class="transparent"></div>
+</div>
+</body>
+</html>

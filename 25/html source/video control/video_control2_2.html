@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: video control</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 20px;
+}
+button {
+	padding: 5px 15px;
+	background-color: #666;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+button:hover {
+	background-color: #888;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+	position: relative;
+	width: 500px;
+	height: 500px;
+}
+.control {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 9999;
+	margin: -40px 0 0 -40px;
+	width: 80px;
+	height: 80px;
+	text-indent: -9999px;
+	background-color: rgba(255,0,0,.5);
+	border-radius: 40px;
+}
+.control:hover {
+	background-color: #f00;
+}
+#my_video {
+	display: block;
+	/* margin-top: 20px; */
+	width: 500px;
+	height: auto;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	var video=document.getElementById("my_video");
+
+	$(".control").click(function(e){
+		e.preventDefault();
+		$(this).fadeOut(300);
+		video.play();
+	});
+	$("#my_video").click(function(){
+		$(".control").fadeIn(300);
+		video.pause();
+	});
+	video.addEventListener("ended", function(){ // JavaScript 이벤트
+		$(".control").fadeIn(300);
+		video.pause();
+		video.currentTime=0;
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title" id="title">basic :: video format</h1>
+<div class="container">
+	<!-- <button id="play">play</button> -->
+	<a href="" class="control">control</a>
+	<video id="my_video" src="video/makeup0.mp4"></video>
+</div>
+</body>
+</html>

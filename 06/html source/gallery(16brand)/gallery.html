@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gallery type :: 16brand</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--[if IE 9]>
+<link rel="stylesheet" href="css/css_ie9.css">
+<script src="js/main_ie9.js"></script>
+<![endif]-->
+<!--[if gt IE 9]><!--><script src="js/main.js"></script><!--<![endif]-->
+<style>
+body, ul, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+ul {
+	list-style: none;
+}
+img {
+	border: 0;
+}
+.gallery {
+	position: relative;
+	width: 100%;
+	height: 810px;
+}
+.gallery .keyvisual {
+	position: relative;
+	width: 100%;
+	height: 810px;
+	overflow: hidden;
+}
+.gallery .keyvisual li {
+	position: absolute;
+	left: 50%;
+	right: 0;
+	top: 0;
+	margin-left: -770px;
+	width: 1540px;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, transform 2.2s;
+	transition: opacity 0.5s, transform 2.2s;
+	-webkit-transform: translateX(100px);
+	transform: translateX(100px);
+}
+.gallery .keyvisual li img{
+	display: inline-block;
+}
+.gallery .keyvisual li:nth-child(2) {
+	background-color: #ebfbf1;
+}
+.gallery .keyvisual li:nth-child(3) {
+	background-color: #c4f2ef;
+}
+.gallery .keyvisual li:nth-child(4) {
+	background-color: #c5f0f7;
+}
+.gallery .keyvisual li:nth-child(5) {
+	background-color: #caecee;
+}
+.gallery .keyvisual li:nth-child(6) {
+	background-color: #fecedc;
+}
+.gallery li.current {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+.gallery .direction_nav {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	margin-left: -500px;
+	margin-top: -34px;
+	width: 1000px;
+	height: 68px;
+}
+.gallery .direction_nav li.left {
+	float: left;
+}
+.gallery .direction_nav li.right {
+	float: right;
+}
+.gallery .pagination {
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	margin-left: -74px;
+	width: 500px;
+}
+.gallery .pagination li {
+	display: inline-block;
+}
+.gallery .pagination li a {
+	display: block;
+	margin: 0 3px;
+	width: 12px;
+	height: 12px;
+	text-indent: -9999px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.gallery .pagination li.current a {
+	background-color: #111;
+}
+</style>
+</head>
+
+<body>
+<div class="gallery">
+	<ul class="keyvisual">
+		<li><img src="images/visual1.jpg" alt="keyvisual"></li>
+		<li><img src="images/visual2.jpg" alt="keyvisual"></li>
+		<li><img src="images/visual3.jpg" alt="keyvisual"></li>
+		<li><img src="images/visual4.jpg" alt="keyvisual"></li>
+		<li><img src="images/visual5.jpg" alt="keyvisual"></li>
+		<li><img src="images/visual6.jpg" alt="keyvisual"></li>
+	</ul>
+	<ul class="direction_nav">
+		<li class="left"><a href="" title="left"><img src="images/main_visual_left.png"></a></li>
+		<li class="right"><a href="" title="right"><img src="images/main_visual_right.png"></a></li>
+	</ul>
+	<ul class="pagination">
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li><a href="">6</a></li>
+	</ul>
+</div>
+</body>
+</html>

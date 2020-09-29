@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: Responsive Trend</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+
+/* table box : box height 유동 */
+.box_container {
+	display: table;
+	margin: 0 auto;
+	max-width: 1000px;
+	border: 1px solid #000;
+}
+.box_container .box {
+	display: table-cell;
+	padding: 20px;
+	width: 25%;
+	height: auto;
+	vertical-align: middle;
+	line-height: 1.5;
+	font-size: 0.875em;
+	color: #666;
+	border: 1px solid #eaeaea;
+}
+
+@media only screen and (max-width: 760px) {
+	.box_container .box:nth-child(4) {
+		display: none;
+	}
+}
+@media only screen and (max-width: 460px) {
+	.box_container .box:nth-child(3) {
+		display: none;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.box_container .box:nth-child(2) {
+		display: none;
+	}
+}
+</style>
+</head>
+
+<body>
+<div class="box_container">
+	<div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae ultricies augue. Praesent pharetra dui ligula, commodo congue mauris congue in. Curabitur venenatis scelerisque tellus. Sed at felis felis. Donec.</div>
+	<div class="box">box</div>
+	<div class="box">box</div>
+	<div class="box">box</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: Responsive Trend</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<style>
+/* Reset CSS */
+* {
+	box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+img {
+	vertical-align: middle;
+	max-width: 100%;
+	border: 0;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table caption, hr {
+	display: none;
+}
+.clearfix::before, .clearfix:before,
+.clearfix::after, .clearfix:after {
+	content: "";
+	display: block;
+}
+.clearfix::after, .clearfix:after {
+	clear: both;
+}
+
+/* common */
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+.food_wrap {
+	padding-top: 95px;
+	overflow-x: hidden;
+	background: url(images/bg_fcfkh.jpg) no-repeat center top;
+}
+.food_wrap .foodcast {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 132px;
+	max-width: 1100px;
+	height: 100%;
+}
+.food_wrap .foodcast > img {
+	width: 100%;
+}
+.food_wrap .foodcast .box1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 33.333%;
+	border: 1px solid #000;
+}
+.food_wrap .foodcast .box2 {
+	position: absolute;
+	left: 0;
+	top: 33.333%;
+	width: 25%;
+	height: 33.333%;
+	border: 1px solid #000;
+}
+.food_wrap .foodcast .box3 {
+	position: absolute;
+	left: 25%;
+	top: 33.333%;
+	width: 25%;
+	height: 33.333%;
+	border: 1px solid #000;
+}
+.food_wrap .foodcast .box4 {
+	position: absolute;
+	left: 25%;
+	top: 66.666%;
+	width: 25%;
+	height: 33.333%;
+	border: 1px solid #000;
+}
+.food_wrap .foodcast .box5 {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	border: 1px solid #000;
+}
+.food_wrap .foodcast .box6 {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 25%;
+	height: 33.333%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how {
+	/* position: relative; */
+	margin: 0 auto 60px;
+	max-width: 1830px;
+	background: url(images/bg_left_food_know_how.png) no-repeat left bottom;
+}
+.food_wrap .food_know_how .tile {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1100px;
+	height: 100%;
+}
+.food_wrap .food_know_how .tile > img {
+	width: 100%;
+}
+.food_wrap .food_know_how .tile .box1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box2 {
+	position: absolute;
+	left: 25%;
+	top: 0;
+	width: 50%;
+	height: 50%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box3 {
+	position: absolute;
+	left: 75%;
+	top: 0;
+	width: 25%;
+	height: 50%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box4 {
+	position: absolute;
+	left: 25%;
+	top: 50%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box5 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box6 {
+	position: absolute;
+	left: 75%;
+	top: 50%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box7 {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box7 {
+	position: absolute;
+	left: 25%;
+	top: 75%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box8 {
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box9 {
+	position: absolute;
+	left: 75%;
+	top: 75%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+.food_wrap .food_know_how .tile .box10 {
+	position: absolute;
+	left: 100%;
+	top: 75%;
+	width: 25%;
+	height: 25%;
+	border: 1px solid #000;
+}
+
+@media only screen and (max-width: 767px) {
+	.food_wrap {
+		/* display: none; */
+	}
+}
+</style>
+</head>
+
+<body>
+<div class="food_wrap">
+	<div class="foodcast">
+		<img src="images/bg_height3.png" alt="background image hit">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+		<div class="box6">box6</div>
+	</div>
+	<div class="food_know_how">
+		<div class="tile">
+			<img src="images/bg_height4.png" alt="background image hit">
+			<div class="box1">
+				<h2><img src="images/img_fk_title.png" alt="title"></h2>
+				<ul class="food_knowhow_con">
+					<li><a href=""><img src="images/btn_fkn0.gif" alt="banner1"></a></li>
+					<li><a href=""><img src="images/btn_fkn1.gif" alt="banner2"></a></li>
+					<li><a href=""><img src="images/btn_fkn2.gif" alt="banner3"></a></li>
+				</ul>
+			</div>
+			<div class="box2">box2</div>
+			<div class="box3">box3</div>
+			<div class="box4">box4</div>
+			<div class="box5">box5</div>
+			<div class="box6">box6</div>
+			<div class="box7">box7</div>
+			<div class="box8">box8</div>
+			<div class="box9">box9</div>
+			<div class="box10">box10</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

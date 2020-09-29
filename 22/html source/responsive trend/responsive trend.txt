@@ -1,0 +1,7 @@
+﻿반응형 스타일 정리
+
+- float box : box height 고정
+
+- table box : box height 유동
+
+- absolute 스타일 : box width, height 유동

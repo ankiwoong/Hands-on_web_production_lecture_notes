@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>basic :: Responsive Trend</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+
+/* float box : box height 고정 */
+.box_container {
+	margin: 0 auto;
+	max-width: 1000px;
+	font-size: 16px;
+	color: #666;
+	border: 1px solid #000;
+}
+.box_container::before,
+.box_container:before,
+.box_container::after,
+.box_container:after {
+	content: "";
+	display: block;
+}
+.box_container::after,
+.box_container:after {
+	clear: both;
+}
+.box_container .box {
+	float: left;
+	padding: 10px;
+	width: 25%;
+	/* height: 200px; *//* http://pxtoem.com */
+	height: 12.500em; /* 16px */
+	font-size: 1em;
+	border: 1px solid #eaeaea;
+}
+
+@media only screen and (max-width: 760px) {
+	.box_container {
+		font-size: 14px;
+	}
+	.box_container .box {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 460px) {
+	.box_container {
+		font-size: 12px;
+	}
+	.box_container .box {
+		width: 100%;
+	}
+}
+</style>
+</head>
+
+<body>
+<div class="box_container">
+	<div class="box">box</div>
+	<div class="box">box</div>
+	<div class="box">box</div>
+	<div class="box">box</div>
+</div>
+</body>
+</html>

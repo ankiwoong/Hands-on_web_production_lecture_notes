@@ -1,0 +1,12 @@
+﻿1) 상단 영역의 제작
+
+1-1) 기본 CSS의 제작
+
+
+1-2) 1Depth GNB JavaScript
+
+
+1-3) Mobile GNB JavaScript
+
+
+1-4) Search Form JavaScript

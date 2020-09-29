@@ -1,0 +1,11 @@
+﻿1) slimscroll plugins를 활용한 스크롤의 제작
+
+
+
+2) plugins를 활용한 갤러리의 제작
+
+https://owlcarousel2.github.io/OwlCarousel2
+
+
+
+3) 일반적인 키비주얼의 제작
